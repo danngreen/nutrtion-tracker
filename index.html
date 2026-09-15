@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>Nutrition Tracker</title>
+<meta name="description" content="Personal nutrition tracker: log foods, track daily totals, review trends.">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a19" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Nutrition">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="appbar">
+    <h1 id="view-title">Foods</h1>
+    <div id="appbar-actions" class="appbar-actions"></div>
+  </header>
+
+  <main id="view" class="view" tabindex="-1"></main>
+
+  <nav class="tabbar" aria-label="Main">
+    <a href="#/day" class="tab" data-tab="day">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+      <span>Day</span>
+    </a>
+    <a href="#/foods" class="tab" data-tab="foods">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3v4.5a3 3 0 006 0V3"/><path d="M8.5 3v4.5"/><path d="M8.5 10.5V21"/><path d="M17.5 3c1.9 0 3.2 2 3.2 4.2s-1.3 4-3.2 4-3.2-1.8-3.2-4S15.6 3 17.5 3z"/><path d="M17.5 11.2V21"/></svg>
+      <span>Foods</span>
+    </a>
+    <a href="#/summary" class="tab" data-tab="summary">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+      <span>Summary</span>
+    </a>
+    <a href="#/settings" class="tab" data-tab="settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.4M12 18.8v2.4M21.2 12h-2.4M5.2 12H2.8M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7M18.5 18.5l-1.7-1.7M7.2 7.2L5.5 5.5"/></svg>
+      <span>Settings</span>
+    </a>
+  </nav>
+</div>
+
+<div id="sheet-root"></div>
+<div id="toast-root" class="toast-root" role="status" aria-live="polite"></div>
+
+<script type="module" src="js/app.js"></script>
+<noscript><p style="padding:2rem">This app needs JavaScript.</p></noscript>
+</body>
+</html>
